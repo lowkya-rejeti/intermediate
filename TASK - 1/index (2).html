@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Image Gallery</h1>
+
+  <div class="filter-buttons">
+    <button onclick="filterImages('all')">All</button>
+    <button onclick="filterImages('nature')">Nature</button>
+    <button onclick="filterImages('city')">City</button>
+  </div>
+
+  <div class="gallery">
+    <div class="image nature">
+      <img src="https://tse2.mm.bing.net/th/id/OIP.BD9cf1eaFBIVQLMXThVtLgHaE6?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Nature" onclick="openLightbox(this)">
+    </div>
+    <div class="image city">
+      <img src="https://images.pexels.com/photos/3346227/pexels-photo-3346227.jpeg?cs=srgb&dl=cityscape-3346227.jpg&fm=jpg" alt="City" onclick="openLightbox(this)">
+    </div>
+    <div class="image nature">
+      <img src="https://tse1.mm.bing.net/th/id/OIP.jHvTOSF7924Ah63W7mozxQHaEo?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Nature" onclick="openLightbox(this)">
+    </div>
+    <div class="image city">
+      <img src="https://tse2.mm.bing.net/th/id/OIP.Xt-7y9CrMZKYJaNU3e1Y2wHaE8?rs=1&pid=ImgDetMain&o=7&rm=3" alt="City" onclick="openLightbox(this)">
+    </div>
+  </div>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-img" class="lightbox-content" />
+    <div class="lightbox-controls">
+      <span onclick="changeImage(-1)">&#10094;</span>
+      <span onclick="changeImage(1)">&#10095;</span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
